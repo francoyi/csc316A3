@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Death by a Thousand Pings</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body>
+  <div id="viz"></div>
+
+  <div class="ui-layer">
+    <section class="title-panel glass">
+      <h1>DEATH BY A<br>THOUSAND PINGS</h1>
+      <p>
+        How high-frequency, short-duration interruptions silently dismantle human
+        attention.
+      </p>
+    </section>
+
+
+    <section class="annotation-card glass annotation-logic">
+      <div class="card-kicker">HIDDEN DANGER ZONE</div>
+      <div class="card-body">
+        The shortest interruptions feel harmless. Because they happen over and over,
+        they accumulate the largest recovery tax.
+      </div>
+    </section>
+
+    <section class="control-panel glass">
+      <div class="control-row control-main">
+        <span class="control-label">VIEW MODE</span>
+        <button id="toggleView" class="toggle-btn">Switch to Event View</button>
+      </div>
+      <div class="control-row">
+        <span class="control-label">CLICK A BUBBLE</span>
+        <span class="control-note">Pulse + highlight</span>
+      </div>
+      <div id="legend" class="legend"></div>
+    </section>
+
+    <aside class="side-panel glass">
+      <h2>THE COST OF PINGING</h2>
+      <p>
+        Short interruptions create the highest attention tax when they cluster densely.
+        The most dangerous category is often not the longest interruption, but the one
+        that repeats most often.
+      </p>
+
+      <div class="metric-list">
+        <div class="metric-item">
+          <span>Most frequent type</span>
+          <strong id="metric-type">Chat Notifications</strong>
+        </div>
+        <div class="metric-item">
+          <span>Avg short interruption</span>
+          <strong id="metric-short">3s</strong>
+        </div>
+        <div class="metric-item">
+          <span>Largest recovery load</span>
+          <strong id="metric-load">63 min</strong>
+        </div>
+        <div class="metric-item">
+          <span>Danger zone share</span>
+          <strong id="metric-share">40%</strong>
+        </div>
+      </div>
+
+      <button id="focusDanger" class="focus-btn">Show danger zone</button>
+    </aside>
+
+    <footer class="footer-bar glass">
+      <span>Top-left = short duration + high refocus cost</span>
+      <span>Bubble size = total daily attention loss</span>
+      <span>Event View = each small bubble is one interruption</span>
+    </footer>
+  </div>
+
+  <div id="tooltip" class="tooltip"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

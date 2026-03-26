@@ -41,16 +41,6 @@ While individual distractions (e.g., checking a notification) appear insignifica
 
 ---
 
-## 📂 Data
-
-Location:
-
-Files:
-- `interruptions.json` — raw interruption events  
-- `interruptions_summary.json` — aggregated data  
-
----
-
 ## ▶️ Run Locally
 
 Start server:
